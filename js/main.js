@@ -1,7 +1,7 @@
 /* MILESTONE 0:
 Creare l’array di oggetti con le informazioni fornite.*/
 
-const OurTeam = [
+const ourTeam = [
     {
         firstName: "Wayne",
         lastName: "Barnett",
@@ -48,7 +48,17 @@ const OurTeam = [
 /*MILESTONE 1:
 Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto.*/
 
-console.log(OurTeam)
+console.log(ourTeam)
+
+/*MILESTONE 2:
+Stampare le stesse informazioni su DOM sottoforma di stringhe.*/
+
+for (i = 0; i < ourTeam.length; i++) {
+    const memberTeamObject = ourTeam[i]
+    console.log(memberTeamObject)
+    const teamList = document.querySelector(".team-list");
+    teamList.innerHTML += `<li class="list-group-item">NAME: ${memberTeamObject.firstName} ${memberTeamObject.lastName}; ROLE: ${memberTeamObject.role}; PHOTO: ${memberTeamObject.photo}</li>`
+}
 
 
 
