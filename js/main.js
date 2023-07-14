@@ -6,7 +6,7 @@ const ourTeam = [
         firstName: "Wayne",
         lastName: "Barnett",
         role: "Founder & CEO",
-        photo: "wayne - barnett - founder - ceo.jpg",
+        photo: "wayne-barnett-founder-ceo.jpg",
     },
 
     {
@@ -57,7 +57,9 @@ for (i = 0; i < ourTeam.length; i++) {
     const memberTeamObject = ourTeam[i]
     console.log(memberTeamObject)
     const teamList = document.querySelector(".team-list");
-    teamList.innerHTML += `<li class="list-group-item">NAME: ${memberTeamObject.firstName} ${memberTeamObject.lastName}; ROLE: ${memberTeamObject.role}; PHOTO: ${memberTeamObject.photo}</li>`
+    /*BONUS 1:
+    Trasformare la stringa foto in una immagine effettiva.*/
+    teamList.innerHTML += `<li class="list-group-item">NAME: ${memberTeamObject.firstName} ${memberTeamObject.lastName}; ROLE: ${memberTeamObject.role}; PHOTO: <img src="img/${memberTeamObject.photo}" alt="photo"></li>`
 }
 
 
